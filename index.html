@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="user-info__edit">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+      <!-- Пример вёрстки карточки: -->
+
+      <!-- <div class="place-card">
+        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <button class="place-card__like-icon"></button>
+        </div>
+      </div> -->
+
+      <!-- конец примера. -->
+
+    </div>
+    <div class="popup" id="addPlace">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required minlength="2" maxlength="30"> 
+            <span class="popup__error" id="nameError"></span>
+            <input type="text" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку"required minlength="2">
+            <span class="popup__error" id="aboutError"></span>
+            <button type="submit" class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup" id="editInfo">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit">
+            <input type="text" name="name" class="popup__input popup__input_type_name" id="try" placeholder="Имя" required minlength="2" maxlength="30">
+            <span class="popup__error" id="nameError"></span>
+            <input type="text" name="about" class="popup__input popup__input_type_link-url" placeholder="О себе" required minlength="2" maxlength="30">
+            <span class="popup__error" id="aboutError"></span>
+            <button type="submit" class="button popup__button" style="font-size: 18px;">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup" id="editAvatar">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form" name="avatar">
+            <input type="text" name="link" class="popup__input popup__input_type_name" placeholder="Ссылка на аватар" required minlength="2">
+            <span class="popup__error" id="nameError"></span>
+            <button type="submit" class="button popup__button" style="font-size: 18px;">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup" id="showPicture">
+      <div class="popup__show-picture">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <img class="popup__picture" alt="" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg">
+      </div>
+    </div>
+
+  </div>
+  <script src="./js/initial.js"></script>
+  <script src="./js/card.js"></script>
+  <script src="./js/cardList.js"></script>
+  <script src="./js/popup.js"></script>
+  <script src="./js/userInfo.js"></script>
+  <script src="./js/formValidator.js"></script>
+  <script src='./js/API.js'></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

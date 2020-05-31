@@ -1,0 +1,6 @@
+.popup__picture {
+    max-width: 80vw;
+    max-height: 80vh;
+    /*box-sizing: border-box;
+    padding: 34px 36px;*/
+  }

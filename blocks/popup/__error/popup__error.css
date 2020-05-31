@@ -1,0 +1,13 @@
+.popup__error {
+    position: absolute;
+    left: 40px;
+    top: 172px;
+    color: red;
+    font-size: 12px;
+}
+
+.popup__error:nth-of-type(2) {
+    position: absolute;
+    left: 40px;
+    top: 242px;
+}

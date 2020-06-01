@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/lagodinka/sprint11/issues"
   },
-  "homepage": "https://github.com/lagodinka/sprint11#readme",
+  "homepage": "https://lagodinka.github.io/sprint11/index.html",
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",

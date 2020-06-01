@@ -1,3 +1,11 @@
+import "./index.css";
+import API from './js/API.js';
+import Card from './js/card.js';
+import CardList from './js/cardList.js';
+import FormValidator from './js/formValidator.js';
+import Popup from './js/popup.js';
+import UserInfo from './js/userInfo.js';
+
 const container = document.querySelector('.places-list');
 // Можно лучше
 // Адрес и токен лучше вынести в константы

@@ -1,4 +1,4 @@
-class API {
+export default class API {
   constructor(link, token) {
     this.link = link;
     this.token = token;

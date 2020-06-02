@@ -1,12 +1,8 @@
-class API {
+export default class API {
   constructor(link, token) {
     this.link = link;
     this.token = token;
   }
-
-  // Можно лучше
-  // Повторяющийся код разбора ответа сервера и возврата ошибки
-  // можно вынести в отдельные методы класса и использовать их
 
   getUserInfo() {
     return fetch(`${this.link}/users/me`, {

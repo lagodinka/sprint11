@@ -1,4 +1,6 @@
-class CardList {
+import {userId} from "../index.js";
+
+export default class CardList {
   constructor(container, initialCards, makeCard) {
     this.container = container;
     this.array = initialCards;

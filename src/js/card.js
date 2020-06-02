@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor({ name, link, likes, id, userId, setLike, resetLike, owner, deleteCard }) {
     this.name = name;
     this.link = link;
@@ -68,11 +68,6 @@ class Card {
   }
 
   like(event) {
-    // Сознательно оставила возможность пользователю включать и выключать сердечко при обрыве связи.
-    // Пускай у юзера останется хоть какой-то приятный функционал
-    //
-    // Вообще это не совсем верно, и по логике так нельзя, но учитывая, что это
-    // дополнительное задание будем считать что это не баг, а фича)
     event.target.classList.toggle('place-card__like-icon_liked');
     this.liked = !this.liked;
     if (this.liked) {

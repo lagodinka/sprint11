@@ -1,4 +1,4 @@
-class FormValidator {
+export default class FormValidator {
   constructor(form) {
     this.form = form;
     this.inputs = this.form.querySelectorAll('input');
@@ -17,7 +17,6 @@ class FormValidator {
     this.errors[index].textContent = item.validationMessage;
 
     if (item.validity.valueMissing || item.validity.tooShort || ((item.name == 'link') && (!item.value.includes('https')))) return false;
-    // else не нужен
     else return true;
   }
 

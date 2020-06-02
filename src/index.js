@@ -7,12 +7,10 @@ import Popup from './js/popup.js';
 import UserInfo from './js/userInfo.js';
 
 const container = document.querySelector('.places-list');
-// Можно лучше
-// Адрес и токен лучше вынести в константы
-// Так будет удобнее менять в случае чего
-const api = new API('https://praktikum.tk/cohort10', '0305adca-6a84-4609-9e59-440e52e1cbdf');
+const baseUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort10' : 'https://praktikum.tk/cohort10';
+const api = new API(baseUrl, '0305adca-6a84-4609-9e59-440e52e1cbdf');
 let list = {};
-let userId = '';
+export let userId = '';
 
 api.getUserInfo()
   .then((data) => {
@@ -47,8 +45,6 @@ const editForm = new FormValidator(document.forms.edit);
 const addForm = new FormValidator(document.forms.new);
 
 const editAvatar = new Popup('#editAvatar');
-// Надо исправить
-// updateAvatar и sendAvatar используются до их определения
 document.querySelector('.user-info__photo').addEventListener('click', () => updateAvatar());
 const avatarForm = new FormValidator(document.forms.avatar);
 document.forms.avatar.addEventListener('submit', (event) => sendAvatar(event));
@@ -151,5 +147,3 @@ editForm.form.closest('.popup').querySelector('.popup__close').addEventListener(
   () => editForm.resetErrors());
 addForm.form.closest('.popup').querySelector('.popup__close').addEventListener('click',
   () => addForm.resetErrors());
-
-// См. Review2.md

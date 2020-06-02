@@ -1,8 +1,5 @@
 export default class Popup {
   constructor(selector) {
-    // Можно лучше
-    // Передать элементы окна и кнопки закрытия в конструктор, чтобы не искать их каждый раз при открытии
-    // и закрытии окна
     this.selector = selector;
     this.setEventListener();
   }

@@ -17,7 +17,6 @@ export default class FormValidator {
     this.errors[index].textContent = item.validationMessage;
 
     if (item.validity.valueMissing || item.validity.tooShort || ((item.name == 'link') && (!item.value.includes('https')))) return false;
-    // else не нужен
     else return true;
   }
 

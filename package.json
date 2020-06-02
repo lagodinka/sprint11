@@ -1,7 +1,7 @@
 {
   "name": "sprint11",
-  "version": "0.0.1",
-  "description": "sprint11",
+  "version": "0.0.2",
+  "description": "Sprint #11 in Yandex.Praktikum course. Webpack learning.",
   "main": "./src/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",

@@ -4,10 +4,6 @@ export default class API {
     this.token = token;
   }
 
-  // Можно лучше
-  // Повторяющийся код разбора ответа сервера и возврата ошибки
-  // можно вынести в отдельные методы класса и использовать их
-
   getUserInfo() {
     return fetch(`${this.link}/users/me`, {
       headers: {
